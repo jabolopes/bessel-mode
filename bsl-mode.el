@@ -24,7 +24,7 @@
 For detail, see `comment-dwim'."
   (interactive "*P")
   (require 'newcomment)
-  (let ((comment-start "--") (comment-end ""))
+  (let ((comment-start "-- ") (comment-end ""))
     (comment-dwim arg)))
 
 
