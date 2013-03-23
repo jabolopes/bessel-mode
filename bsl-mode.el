@@ -87,7 +87,7 @@ For detail, see `comment-dwim'."
        (mapcar (lambda (str) (concat "(" str ")")) bsl-operators)))
 
 (defcustom bsl-punctuation
-  '("@" "=" "|" "->" "<-" "&&" "||")
+  '("@" ":" "=" "|" "->" "<-" "&&" "||")
   "Punctuation for `bsl-mode'."
   :group 'bsl
   :type '(repeat string))
@@ -99,7 +99,7 @@ For detail, see `comment-dwim'."
   :type '(repeat string))
 
 (defcustom bsl-keywords
-  '("as" "def" "me" "module" "nrdef" "type" "use" "where")
+  '("as" "def" "me" "module" "nrdef" "sig" "type" "use" "where")
   "Keywords for `bsl-mode'."
   :group 'bsl
   :type '(repeat string))
@@ -108,7 +108,7 @@ For detail, see `comment-dwim'."
 (setq bsl-composition-re (regexp-opt '("o" "(o)") 'words))
 (setq bsl-operators-re (regexp-opt bsl-operators-paren))
 (setq bsl-punctuation-re (regexp-opt bsl-punctuation))
-(setq bsl-top-decl "\\(def\\|nrdef\\) \\(\\(\\w\\|\\s_\\)+\\)")
+(setq bsl-top-decl "\\(def\\|sig\\|nrdef\\) \\(\\(\\w\\|\\s_\\)+\\)")
 (setq bsl-types-re "\\b[[:upper:]][[:alnum:]'_]*\\b")
 (setq bsl-constants-re (regexp-opt bsl-constants 'words))
 (setq bsl-keywords-re (regexp-opt bsl-keywords 'words))
