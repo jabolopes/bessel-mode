@@ -9,8 +9,10 @@ Installation
 ------------
 
 Download the file 'bsl-mode.el' and place it in a directory that is
-reachable through Emacs.  For example, I will assume that the file
-'bsl-mode.el' was placed in the following directory.
+reachable through Emacs.
+
+For example, I will assume that the file 'bsl-mode.el' was placed in
+the following directory.
 
     ~/.emacs.d/site-lisp/bsl-mode
 
