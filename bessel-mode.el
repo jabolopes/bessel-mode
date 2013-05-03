@@ -1,20 +1,20 @@
 ;;;###autoload
-(add-to-list 'auto-mode-alist '("\\.bsl\\'" . bsl-mode))
+(add-to-list 'auto-mode-alist '("\\.bsl\\'" . bessel-mode))
 
 
 ; versioning
 
-(defconst bsl-version "1.0" "`bsl-mode' version number.")
+(defconst bsl-version "1.0" "`bessel-mode' version number.")
 
 (defun bsl-version ()
-  "Echo the current version of `bsl-mode' in the minibuffer."
+  "Echo the current version of `bessel-mode' in the minibuffer."
   (interactive)
-  (message "bsl-mode version %s" bsl-version))
+  (message "bessel-mode version %s" bsl-version))
 
 (defgroup bsl nil
-  "Major mode for editing Bsl programs."
+  "Major mode for editing Bessel programs."
   :group 'languages
-  :prefix "bsl-")
+  :prefix "bessel-")
 
 
 ; comments
@@ -50,11 +50,11 @@ For detail, see `comment-dwim'."
     ;; (modify-syntax-entry ?\| ". 14" table)
     ;; (modify-syntax-entry ?\- ". 23" table)
     table)
-  "Syntax table for `bsl-mode'.")
+  "Syntax table for `bessel-mode'.")
 
 (easy-menu-define bsl-mode-menu bsl-mode-map
-  "Menu for the Bsl major mode."
-  `("Bsl"
+  "Menu for the Bessel major mode."
+  `("Bessel"
     ["About" (bsl-comment-dwim)]
     "---"
     ;; ["Indent line" indent-according-to-mode]
@@ -77,7 +77,7 @@ For detail, see `comment-dwim'."
 
 (defcustom bsl-operators
   '("\*" "\/" "+" "-" "==" "/=" "<" "<=" ">" ">=")
-  "Operators for `bsl-mode'."
+  "Operators for `bessel-mode'."
   :group 'bsl
   :type '(repeat string))
 
@@ -88,19 +88,19 @@ For detail, see `comment-dwim'."
 
 (defcustom bsl-punctuation
   '("@" ":" "=" "|" "->" "<-" "&&" "||")
-  "Punctuation for `bsl-mode'."
+  "Punctuation for `bessel-mode'."
   :group 'bsl
   :type '(repeat string))
 
 (defcustom bsl-constants
   '("false" "true")
-  "Constants for `bsl-mode'."
+  "Constants for `bessel-mode'."
   :group 'bsl
   :type '(repeat string))
 
 (defcustom bsl-keywords
   '("as" "def" "me" "module" "nrdef" "sig" "type" "use" "where")
-  "Keywords for `bsl-mode'."
+  "Keywords for `bessel-mode'."
   :group 'bsl
   :type '(repeat string))
 
@@ -125,8 +125,8 @@ For detail, see `comment-dwim'."
 
 
 ;;;###autoload
-(define-derived-mode bsl-mode fundamental-mode "Bsl"
-  "Major mode for editing Bsl"
+(define-derived-mode bessel-mode fundamental-mode "Bessel"
+  "Major mode for editing Bessel"
   :syntax-table bsl-syntax-table
   (set (make-local-variable 'comment-start) "-- ")
   (set (make-local-variable 'comment-padding) 0)
@@ -158,4 +158,4 @@ For detail, see `comment-dwim'."
    0)
 
 
-(provide 'bsl-mode)
+(provide 'bessel-mode)
