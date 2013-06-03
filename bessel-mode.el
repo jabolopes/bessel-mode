@@ -99,7 +99,7 @@ For detail, see `comment-dwim'."
   :type '(repeat string))
 
 (defcustom bsl-keywords
-  '("as" "def" "me" "module" "nrdef" "sig" "type" "use" "where")
+  '("as" "cotype" "def" "me" "module" "nrdef" "sig" "type" "use" "where")
   "Keywords for `bessel-mode'."
   :group 'bsl
   :type '(repeat string))
